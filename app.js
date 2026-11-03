@@ -1,10 +1,13 @@
 document.getElementById('scanBtn').addEventListener('click', async () => {
-    const apiKey = document.getElementById('apiKey').value.trim();
+    // --- HARDCODED API KEY ---
+    const apiKey = "3853d9f5fb034cdfb5faa5f430743f00";
+    // -------------------------
+
     const fileInput = document.getElementById('cardImageInput');
     const resultsContainer = document.getElementById('cardsList');
 
-    if (!apiKey) {
-        alert("Please enter your CardSight API Key!");
+    if (!apiKey || apiKey === "YOUR_ACTUAL_CARDSIGHT_API_KEY_HERE") {
+        alert("Please insert your valid API key into app.js!");
         return;
     }
 
@@ -52,7 +55,7 @@ document.getElementById('scanBtn').addEventListener('click', async () => {
             resultsContainer.innerHTML = `
                 <div class="card-item">
                     <h3>${data.player_name}</h3>
-                    <p><strong>Year/Set:</strong> ${data.year || ''} ${data.set_name || ''}</p>
+                    <p><strong>Year/Set:</strong> ${data.year || ''} ${card.set_name || ''}</p>
                     <p><strong>Card #:</strong> ${data.card_number || 'N/A'}</p>
                 </div>
             `;
