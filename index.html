@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Card Scanner & Batch Identifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Legendary Collection Scanner</h1>
+        <p>Upload multi-card photos or binder shots (avoid heavy glare!)</p>
+        
+        <!-- API Key Input -->
+        <div class="input-group">
+            <label for="apiKey">CardSight API Key:</label>
+            <input type="password" id="apiKey" placeholder="Paste your API key here">
+        </div>
 
+        <!-- File Upload Section -->
+        <div class="upload-section">
+            <input type="file" id="cardImageInput" accept="image/*" capture="environment">
+            <button id="scanBtn">Scan Batch</button>
+        </div>
+
+        <!-- Results Display -->
+        <div id="resultsArea" class="results-container">
+            <h2>Scan Results</h2>
+            <div id="cardsList" class="cards-grid">
+                <!-- Recognized cards will automatically pop up here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
