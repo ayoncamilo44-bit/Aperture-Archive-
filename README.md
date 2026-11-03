@@ -1,2 +1,2 @@
-# Aperture-Achive-
+# Aperture-Archive-
 optical and visual scanning project
